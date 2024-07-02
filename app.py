@@ -34,7 +34,8 @@ def adicionar_semijoias():
         commit()
         # encaminhar de volta para a listagem
         return redirect("listar_semijoias ") 
-
+    
+    
 '''
 run:
 $ flask run

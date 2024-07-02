@@ -12,16 +12,20 @@
 
 <table border="1">
     <tr>
-        <td>Gargantilha</td>
-        <td>Pulseira</td>
-        <td>Brinco</td>
+        <td>codigo</td>
+        <td>valor</td>
+        <td>desc</td>
+        <td>corc</td>
+        <td>qualidadec</td>
     </tr>
 
     {% for p in semijoia %}
     <tr>
-        <td>{{p.gargantilha}}</td>
-        <td>{{p.pulseira}}</td>
-        <td>{{p.brinco}}</td>
+        <td>{{p.codigo}}</td>
+        <td>{{p.valor}}</td>
+        <td>{{p.desc}}</td>
+        <td>{{p.cor}}</td>
+        <td>{{p.qualidade}}</td>
     </tr>
     {% endfor %}
    
