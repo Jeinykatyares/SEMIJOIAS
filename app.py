@@ -35,7 +35,6 @@ def adicionar_semijoias():
         # encaminhar de volta para a listagem
         return redirect("listar_semijoias ") 
 
-app.run()
 '''
 run:
 $ flask run
