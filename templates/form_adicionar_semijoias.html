@@ -1,0 +1,23 @@
+{% extends 'main_template.html' %}
+
+{% block header %}
+<h1>{% block title %}Cadastrar pessoa{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+
+<form action="adicionar_semijoias">
+    <p>
+        Gargantilha: <input type="text" gargantilha="gargantilha" value="prata">
+    </p>
+    <p>
+        Pulseira: <input type="text" pulseira="pulseira" value="dourada">
+    </p>
+    <p>
+       Brinco: <input type="text" semijoias="brinco" value="dourado">
+    </p>
+
+    <button>Cadastrar</button>
+</form>
+
+{% endblock %}

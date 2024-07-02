@@ -1,0 +1,30 @@
+{% extends 'main_template.html' %}
+
+{% block header %}
+  <h1>{% block title %}Listagem de semijoias{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  
+<p>
+    <a href="{{ url_for("form_adicionar_semijoias") }}">Cadastrar nova semijoias</a>
+</p>
+
+<table border="1">
+    <tr>
+        <td>Gargantilha</td>
+        <td>Pulseira</td>
+        <td>Brinco</td>
+    </tr>
+
+    {% for p in semijoia %}
+    <tr>
+        <td>{{p.gargantilha}}</td>
+        <td>{{p.pulseira}}</td>
+        <td>{{p.brinco}}</td>
+    </tr>
+    {% endfor %}
+   
+</table>
+
+{% endblock %}
