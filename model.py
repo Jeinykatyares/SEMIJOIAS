@@ -5,7 +5,7 @@ class Semijoia(db.Entity):
     valor = Required(str)
     desc=Required(str)
     cor= Required(str)
-    qualidade=Required()
+    qualidade=Required(str)
     def __str__(self):
         return f'{self.codigo}, {self.valor}, {self.desc}', {self.cor}, {self.qualidade}
 
