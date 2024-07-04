@@ -22,10 +22,15 @@ def form_adicionar_semijoias():
 
 @app.route("/adicionar_semijoias")
 def adicionar_semijoias():
+    '''
     # obter os parâmetros
-    gargantilha = request.args.get("gargantilha ")
-    pulseira = request.args.get("pulseira")
-    brinco = request.args.get("brinco")
+    codigo = request.args.get("codigo")
+    valor = request.args.get("valor")
+    desc = request.args.get("desc")
+    cor = request.args.get("cor")
+    qualidade = request.args.get("qualidade")
+    '''
+
     # salvar
     with db_session:
         # criar a pessoa
@@ -33,7 +38,7 @@ def adicionar_semijoias():
         # salvar
         commit()
         # encaminhar de volta para a listagem
-        return redirect("adicionar_semijoias ") 
+        return redirect("listar_semijoias") 
     
  
 '''
