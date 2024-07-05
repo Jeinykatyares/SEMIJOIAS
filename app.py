@@ -12,7 +12,7 @@ def about():
 @app.route("/listar_semijoias")
 def listar_semijoias():
     with db_session:
-        # obtém as pessoas
+       
         semijoias = Semijoia.select() 
         return render_template("listar_semijoias.html", semijoias=semijoias )
 
@@ -22,26 +22,12 @@ def form_adicionar_semijoias():
 
 @app.route("/adicionar_semijoias")
 def adicionar_semijoias():
-    '''
-    # obter os parâmetros
     codigo = request.args.get("codigo")
     valor = request.args.get("valor")
     desc = request.args.get("desc")
     cor = request.args.get("cor")
     qualidade = request.args.get("qualidade")
-    '''
-
-    # salvar
     with db_session:
-        # criar a pessoa
         p = Semijoia(**request.args)
-        # salvar
         commit()
-        # encaminhar de volta para a listagem
         return redirect("listar_semijoias") 
-    
- 
-'''
-run:
-$ flask run
-'''
